@@ -33,19 +33,19 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        // Initialize the Toolbar
+        // Set up the Toolbar
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        // Initialize the button
+        // Set up the button
         Button myButton = findViewById(R.id.my_button);
 
-        // Set the onKeyListener for the button
+        // Add a key listener to the button
         myButton.setOnKeyListener(new View.OnKeyListener() {
             @Override
             public boolean onKey(View v, int keyCode, KeyEvent event) {
                 if (event.getAction() == KeyEvent.ACTION_DOWN && keyCode == KeyEvent.KEYCODE_ENTER) {
-                    // Handle key press event
+                    // Handle the key press event
                     Toast.makeText(MainActivity.this, "Enter Key Pressed!", Toast.LENGTH_SHORT).show();
                     return true;
                 }
@@ -53,10 +53,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Initialize GestureDetector
+        // Initialize the GestureDetector
         gestureDetector = new GestureDetector(this, new GestureListener());
 
-        // Add Fragment programmatically
+        // Add the Fragment programmatically
         if (savedInstanceState == null) {
             FragmentManager fragmentManager = getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
@@ -78,14 +78,14 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
-            // Handle fling gesture
+            // Handle the fling gesture
             Toast.makeText(MainActivity.this, "Fling Gesture Detected!", Toast.LENGTH_SHORT).show();
             return true;
         }
 
         @Override
         public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY) {
-            // Handle scroll gesture
+            // Handle the scroll gesture
             Toast.makeText(MainActivity.this, "Scroll Gesture Detected!", Toast.LENGTH_SHORT).show();
             return true;
         }
