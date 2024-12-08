@@ -17,7 +17,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- activity_main.xml -->
     <Button
         android:id="@+id/my_button"
         android:layout_width="wrap_content"
@@ -25,8 +24,7 @@
         android:text="Press Enter"
         tools:ignore="MissingConstraints" />
 
-    <!-- fragment_example.xml -->
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -38,9 +36,7 @@
             android:text="Hello from Fragment!" />
     </LinearLayout>
 
-    <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity">
@@ -68,9 +64,8 @@
             android:id="@+id/fragment_container"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:name="com.example.dawstin_appdesign.TaskFragment" />
+            android:name="com.example.dawstin_appdesign.TaskFragment"
+            tools:layout="@layout/fragment_task" />
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-
-
