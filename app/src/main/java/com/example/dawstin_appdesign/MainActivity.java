@@ -39,22 +39,12 @@ public class MainActivity extends AppCompatActivity {
 
         // Set up the button
         Button myButton = findViewById(R.id.my_button);
-
-        // Add a key listener to the button
-        myButton.setOnKeyListener(new View.OnKeyListener() {
+        myButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public boolean onKey(View v, int keyCode, KeyEvent event) {
-                if (event.getAction() == KeyEvent.ACTION_DOWN && keyCode == KeyEvent.KEYCODE_ENTER) {
-                    // Handle the key press event
-                    Toast.makeText(MainActivity.this, "Enter Key Pressed!", Toast.LENGTH_SHORT).show();
-                    return true;
-                }
-                return false;
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Button Clicked!", Toast.LENGTH_SHORT).show();
             }
         });
-
-        // Initialize the GestureDetector
-        gestureDetector = new GestureDetector(this, new GestureListener());
 
         // Add the Fragment programmatically
         if (savedInstanceState == null) {
